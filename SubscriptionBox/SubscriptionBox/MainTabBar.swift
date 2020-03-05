@@ -16,14 +16,15 @@ class MainTabBar: UITabBarController {
     
     func createTabBar() -> UITabBarController {
         let tabbar = UITabBarController()
-        tabbar.viewControllers = [createHomeNC(), createNewNC(), createHistoryNC(), createProfileNC()]
+        tabbar.viewControllers = [ createHomeNC(), createNewNC(), createHistoryNC(), createProfileNC()]
         return tabbar
     }
     
     func createHomeNC() -> UINavigationController {
-        let homeVC = HomeVC()
+        let homeVC = NewHomeVC()
         homeVC.title = "Home"
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+
         return UINavigationController(rootViewController: homeVC)
     }
     
@@ -31,23 +32,24 @@ class MainTabBar: UITabBarController {
         let newBoxVC = NewBoxVC()
         newBoxVC.title = "New Box"
         newBoxVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        
         return UINavigationController(rootViewController: newBoxVC)
 
     }
     
     func createHistoryNC() -> UINavigationController {
-        let homeVC = HomeVC()
-        homeVC.title = "Home"
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
-        return UINavigationController(rootViewController: homeVC)
+        let historyVC = HistoryVC()
+        historyVC.title = "Past Boxes"
+        historyVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        return UINavigationController(rootViewController: historyVC)
 
     }
     
     func createProfileNC() -> UINavigationController{
-        let homeVC = HomeVC()
-        homeVC.title = "Home"
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
-        return UINavigationController(rootViewController: homeVC)
+        let profileVC = ProfileVC()
+        profileVC.title = "Profile"
+        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
+        return UINavigationController(rootViewController: profileVC)
 
     }
     

@@ -15,7 +15,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
+        tabBarController?.tabBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
         configureCollectionView()
@@ -81,15 +81,12 @@ extension HomeVC: UICollectionViewDelegateFlowLayout{
         return UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0) //.zero
     }
 
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 10
-//    }
 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 40
+        return 10
+        
     }
+        
 }

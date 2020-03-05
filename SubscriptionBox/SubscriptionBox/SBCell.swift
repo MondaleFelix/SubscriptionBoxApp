@@ -43,6 +43,8 @@ class SBCell: UICollectionViewCell {
             self.textLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
+
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()

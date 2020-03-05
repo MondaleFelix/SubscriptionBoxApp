@@ -74,9 +74,9 @@ class ViewController: UIViewController {
 
     
     func setViews() {
-        firstView = OnboardingPage(message:"Tell us about your pet's personality", imageName:"hiker", isLastPage: false, color: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1))
-        secondView = OnboardingPage(message:"Tell us about your pet's personality", imageName:"burger", isLastPage: false, color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
-        thirdView = OnboardingPage(message:"Tell us about your pet's personality", imageName:"student", isLastPage: true, color: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))
+        firstView = OnboardingPage(message:"Tell us if your dog is lazy or active", imageName:"hiker", isLastPage: false, color: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1))
+        secondView = OnboardingPage(message:"We will provide a box with nutrious food", imageName:"burger", isLastPage: false, color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
+        thirdView = OnboardingPage(message:"All boxes are backed with years of studies", imageName:"student", isLastPage: true, color: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))
         
         pagesArray = [firstView,secondView,thirdView]
         
