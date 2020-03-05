@@ -34,7 +34,7 @@ class SBCollectionViewCell: UICollectionViewCell {
         
         contentView.layer.borderWidth = 2
         contentView.layer.cornerRadius = 10
-        
+        contentView.backgroundColor = .systemYellow
 
         textLabel.font = UIFont(name: "Avenir Next Condensed Heavy", size: 30)
 

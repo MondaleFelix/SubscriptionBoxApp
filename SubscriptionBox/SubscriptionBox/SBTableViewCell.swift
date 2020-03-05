@@ -50,10 +50,10 @@ class SBTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
 
-            boxImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            boxImageView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 10),
             boxImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            boxImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
-            boxImageView.widthAnchor.constraint(equalToConstant: 100),
+            boxImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            boxImageView.widthAnchor.constraint(equalToConstant: 80),
             
             
             dateLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
