@@ -10,6 +10,8 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    var imageConstraintStart: NSLayoutConstraint!
+    var imageConstraintEnd: NSLayoutConstraint!
     let imageView = UIImageView()
     let usernameTextField = SBTextField(text: "username")
     let passwordTextField = SBTextField(text: "password")
@@ -26,7 +28,18 @@ class LoginVC: UIViewController {
         createDismissKeyboardTapGesture()
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        
+        imageConstraintStart.isActive = false
+        imageConstraintEnd.isActive = true
+        
+        UIView.animate(withDuration: 1.59, delay: 0.2,
+                       usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
+                        self.view.layoutIfNeeded()
+                        self.imageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }, completion: nil)
+    }
+    
     func createDismissKeyboardTapGesture(){
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
@@ -37,9 +50,20 @@ class LoginVC: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "burger")!
         
+        imageConstraintStart = imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        imageConstraintStart.isActive = true
+        
+        //Right now it's off
+        imageConstraintEnd = imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        
+        imageView.transform = CGAffineTransform(scaleX: 0, y: 0)
+
+        
+        
+        
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+           
             imageView.heightAnchor.constraint(equalToConstant: 200),
             imageView.widthAnchor.constraint(equalToConstant: 200)
         ])
