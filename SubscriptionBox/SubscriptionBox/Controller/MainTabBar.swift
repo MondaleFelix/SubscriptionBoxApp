@@ -6,6 +6,7 @@
 //  Copyright © 2020 Mondale. All rights reserved.
 //
 
+import SwiftUI
 import UIKit
 
 class MainTabBar: UITabBarController {
@@ -22,8 +23,9 @@ class MainTabBar: UITabBarController {
     
     func createHomeNC() -> UINavigationController {
         let homeVC = NewHomeVC()
-        homeVC.title = "Home"
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        
+        homeVC.tabBarItem.title = "Home"
+        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named:"home"), tag: 0)
 
         return UINavigationController(rootViewController: homeVC)
     }
@@ -31,8 +33,8 @@ class MainTabBar: UITabBarController {
     func createNewNC() -> UINavigationController {
         let newBoxVC = NewBoxVC()
         newBoxVC.title = "New Box"
-        newBoxVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-        
+        newBoxVC.tabBarItem = UITabBarItem(title: "New Box", image: UIImage(named:"newBox"), tag: 1)
+
         return UINavigationController(rootViewController: newBoxVC)
 
     }
@@ -40,16 +42,20 @@ class MainTabBar: UITabBarController {
     func createHistoryNC() -> UINavigationController {
         let historyVC = HistoryVC()
         historyVC.title = "Past Boxes"
-        historyVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        historyVC.tabBarItem = UITabBarItem(title: "Past Boxes", image: UIImage(named:"star"), tag: 2)
+
         return UINavigationController(rootViewController: historyVC)
 
     }
     
     func createProfileNC() -> UINavigationController{
-        let profileVC = ProfileVC()
-        profileVC.title = "Profile"
-        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
-        return UINavigationController(rootViewController: profileVC)
+        let profileVC = ContentView()
+        let hostNavVC = UIHostingController(rootView: profileVC)
+
+        hostNavVC.title = "Profile"
+        hostNavVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named:"pastBox"), tag: 3)
+
+        return UINavigationController(rootViewController: hostNavVC)
 
     }
     

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0EC30524173C6A0080BB2F /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EC30424173C6A0080BB2F /* RoundImage.swift */; };
+		6F0EC30724173C960080BB2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EC30624173C960080BB2F /* ContentView.swift */; };
+		6F0EC30924173D110080BB2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EC30824173D110080BB2F /* MapView.swift */; };
 		6F12F8F02417147600F82D3A /* BoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F12F8EF2417147600F82D3A /* BoxModel.swift */; };
 		6F671AA82410F5290032C7BA /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F671AA72410F5290032C7BA /* HistoryVC.swift */; };
 		6F671AAA2410F5840032C7BA /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F671AA92410F5840032C7BA /* ProfileVC.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F0EC30424173C6A0080BB2F /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		6F0EC30624173C960080BB2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6F0EC30824173D110080BB2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6F12F8EF2417147600F82D3A /* BoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxModel.swift; sourceTree = "<group>"; };
 		6F671AA72410F5290032C7BA /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		6F671AA92410F5840032C7BA /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -75,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0EC30124172FCF0080BB2F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6F0EC30424173C6A0080BB2F /* RoundImage.swift */,
+				6F0EC30624173C960080BB2F /* ContentView.swift */,
+				6F0EC30824173D110080BB2F /* MapView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		6F12F8EB24170AA200F82D3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +168,7 @@
 				6F12F8EB24170AA200F82D3A /* Model */,
 				6F12F8EC24170AAC00F82D3A /* View */,
 				6F12F8ED24170ABC00F82D3A /* Controller */,
+				6F0EC30124172FCF0080BB2F /* Profile */,
 			);
 			path = SubscriptionBox;
 			sourceTree = "<group>";
@@ -229,6 +246,7 @@
 			files = (
 				6F671ABC24115EE90032C7BA /* FavoritesSection.swift in Sources */,
 				6F671AB22411515B0032C7BA /* Section.swift in Sources */,
+				6F0EC30724173C960080BB2F /* ContentView.swift in Sources */,
 				6FF76B78240DFEDB002AF250 /* MainTabBar.swift in Sources */,
 				6FCD0FCA2403AF1400BC3AB6 /* ViewController.swift in Sources */,
 				6F671AAA2410F5840032C7BA /* ProfileVC.swift in Sources */,
@@ -238,6 +256,7 @@
 				6F671AB8241153A40032C7BA /* TitleSection.swift in Sources */,
 				6FCD0FC82403AF1400BC3AB6 /* SceneDelegate.swift in Sources */,
 				6F671AAE24111C0B0032C7BA /* SBTableViewCell.swift in Sources */,
+				6F0EC30924173D110080BB2F /* MapView.swift in Sources */,
 				6FCD0FE22403F85400BC3AB6 /* OnboardingPage.swift in Sources */,
 				6FCD0FE82404AA0500BC3AB6 /* SBTextField.swift in Sources */,
 				6F12F8F02417147600F82D3A /* BoxModel.swift in Sources */,
@@ -249,6 +268,7 @@
 				6F671ABE241188B00032C7BA /* SBCollectionViewCell.swift in Sources */,
 				6F671AB02411259C0032C7BA /* PastBoxesVC.swift in Sources */,
 				6FF76B7E240E5E11002AF250 /* NewBoxVC.swift in Sources */,
+				6F0EC30524173C6A0080BB2F /* RoundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
