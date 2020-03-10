@@ -14,6 +14,8 @@ class SBCell: UICollectionViewCell {
     static var identifier : String = "Cell"
     
     var textLabel = UILabel(frame: .zero)
+    var isNotSelected = true
+    
     
     
     
@@ -42,6 +44,16 @@ class SBCell: UICollectionViewCell {
             self.textLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             self.textLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
+    }
+    
+    func changeColor(){
+        if isNotSelected{
+            self.backgroundColor = .systemGray2
+            self.isNotSelected = false
+        } else {
+            self.backgroundColor = .systemBlue
+            self.isNotSelected = true
+        }
     }
 
     
