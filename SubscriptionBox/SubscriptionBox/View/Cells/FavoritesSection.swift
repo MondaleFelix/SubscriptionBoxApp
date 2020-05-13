@@ -11,7 +11,14 @@ import UIKit
 struct FavoritesSection: Section {
     let numberOfItems = 7
     
-    let texts = [ "Snacks", "Treats", "Bites", "Bones", "Cat", "Dog eggs", "Dog Balls", ]
+    let favorites = [ Item(name: "Snacks", image: "box"),
+                      Item(name: "Treats", image: "box"),
+                      Item(name: "Bites", image: "box"),
+                      Item(name: "Bones", image: "box"),
+                      Item(name: "Cat", image: "box"),
+                      Item(name: "Dog Eggs", image: "box"),
+                      Item(name: "Dog Balls", image: "box")
+        ]
     
     func layoutSection() -> NSCollectionLayoutSection? {
         
@@ -32,8 +39,9 @@ struct FavoritesSection: Section {
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SBCollectionViewCell.identifier, for: indexPath) as! SBCollectionViewCell
-        cell.textLabel.text = texts[indexPath.row]
-        cell.cellImage.image = UIImage(named: "box")
+        let favItem = favorites[indexPath.row]
+        cell.textLabel.text = favItem.name
+        cell.cellImage.image = UIImage(named: favItem.image)
         return cell
     }
     

@@ -10,8 +10,14 @@ import UIKit
 
 struct FeaturedSection: Section {
     let numberOfItems = 4
-    let texts = ["Treats", "Toys", "Groom", "Food", "Treats"]
-
+    
+    let categories = [
+        Category(name: "Treats"),
+        Category(name: "Toys"),
+        Category(name: "Groom"),
+        Category(name: "Food")
+    ]
+    
     func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.75), heightDimension: .fractionalHeight(0.75))
         
@@ -31,7 +37,7 @@ struct FeaturedSection: Section {
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SBCell.identifier, for: indexPath) as! SBCell
-        cell.textLabel.text = texts[indexPath.row]
+        cell.textLabel.text = categories[indexPath.row].name
         return cell
     }
 }

@@ -12,7 +12,15 @@ class NewBoxVC: UIViewController {
 
     var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    var placeholders: [String] = ["Treats", "Toys", "Supplies", "Food", "Corn", "Medicine"]
+    var categories: [Category] = [
+        Category(name: "Treat"),
+        Category(name: "Toys"),
+        Category(name: "Supplies"),
+        Category(name: "Food"),
+        Category(name: "Corn"),
+        Category(name: "Medicine")
+    ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +62,7 @@ extension NewBoxVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SBCell.identifier, for: indexPath) as! SBCell
-        let data = self.placeholders[indexPath.item]
+        let data = self.categories[indexPath.item].name
         cell.textLabel.text = data
         return cell
     }

@@ -10,20 +10,12 @@ import Foundation
 import UIKit
 
 
+struct Category {
+    let name: String
+}
+
 struct Item {
     let name : String
     let image: String
 }
 
-struct Box {
-    let date: String
-    let items: [Item]
-    let image: String
-}
-
-
-struct NewBox {
-    let image: UIImage
-    let name: String
-
-}
